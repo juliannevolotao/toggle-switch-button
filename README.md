@@ -24,15 +24,12 @@
 <br>
 <br>
 
-___
 
 ## :eye: Preview
 
 <p align="center">
     <img alt="Switch button" src=".github/toggle.gif"   >
 </p>
-
-___
 
 <br>
 <br>
@@ -52,7 +49,6 @@ ___
 <br>
 <br>
 
-___
 
 <h5 align="center">
   :heart: Desenvolvido por Julianne Volotão.
