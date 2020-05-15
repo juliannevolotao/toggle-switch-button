@@ -2,22 +2,14 @@ import React from 'react';
 
 import './styles.sass';
 
-class Container extends React.Component{
+export default function Container(props){
 
-    constructor(props){
-        super(props);
-    }
-
-    render() {
-        return (
-            <div className="containerConfig">
-                
-                {this.props.children}
-                
-            </div>
-        )
-    }
-
+    return (
+        <div className="containerConfig">
+            
+            {props.children}
+            
+        </div>
+    )
+    
 }
-
-export default Container;

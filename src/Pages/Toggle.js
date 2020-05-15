@@ -1,36 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Container from '../Components/Container';
 import Switch from '../Components/Switch';
 
 import './styles.sass';
 
-export default class Toggle extends React.Component {
+export default function Toggle () {
+    const [sun, setSun] = useState(true);
 
-    constructor(){
-        super()
-        this.state = {
-            sun: true
-        }
+    const onChildChange = (result) => {
+        setSun(!sun)
     }
 
-    onChildChange = (result) => {
-        this.setState((state) => {
-            return {
-                sun: !state.sun
-            }
-        })
+    return (
+        <Container>
+            <div className={`lights ${ + sun ? "light-on" : "light-off"} `  } ></div>
+            <Switch callBackParent={() => onChildChange() } />
+        </Container>
 
-        console.log(this.state.sun)
-    }
-
-    render() {
-        return (
-            <Container>
-                <div className={"lights " + `${this.state.sun ? "light-on" : "light-off"}` } ></div>
-                <Switch callbackParent={() => this.onChildChange()}/>
-            </Container>
-        )
-    }
+    )
 
 }
